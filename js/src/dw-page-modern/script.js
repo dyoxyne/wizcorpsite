@@ -297,7 +297,35 @@ jQuery(function($){
 		setupPhotos(data, { first: false });
 	});
 
-
+    function setupHtmlShowcases() {
+        var $showcase = $('#html-showcase');
+        $showcase.slick({
+			arrows: false,
+			dots: true,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			autoplay: true,
+			pauseOnHover : false,
+			autoplaySpeed: 3000,
+			responsive: [
+				{
+					breakpoint: 979,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 599,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		});
+    }
+    setupHtmlShowcases();
 
 	/**
 	 * Responsive Iframe
